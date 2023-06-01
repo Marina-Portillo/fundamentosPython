@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidad</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        /*Sobreescribe a los anteriores
+        *{
+            background-color: chocolate;
+        }*/
+        body{
+            background-color: antiquewhite;
+               
+        }
+        body *{
+           background-color: blueviolet;
+           width: 100%;
+           height: 50px;
+
+        }
+        .item{
+            background-color: lightgreen;
+        }
+        #container .item{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <p>Texto</p>
+        <p>Texto</p>
+        <p>Texto</p>
+    </div>
+    <div class="item"></div>
+</body>
+</html>
