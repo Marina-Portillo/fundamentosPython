@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases y Pseudoelementos</title>
+    <style>
+        #container{
+            width: 80%;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: chocolate;
+            margin: 20px;
+            color: white;
+        }
+        .item:hover{
+            background-color: beige;
+            color: black;
+        }
+        /*agrego emogi despues del texto*/
+         .item::after{
+         content: "❤";
+     }   
+         /*primera letra en rojo*/
+         p::first-letter{
+            color: red;
+         }
+         /*borde*/
+         .item:first-child{
+            border: 5px solid black;
+         }
+        /*redondeo*/
+         .item:nth-child(even){
+            border-radius: 50px;
+         }
+
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="item">Texto</div>
+        <div class="item">Texto</div>
+        <div class="item">Texto</div>
+        <div class="item">Texto</div>
+        <div class="item">Texto</div>
+        <div class="item">Texto</div>
+    </div>
+    <p>Texto</p>
+    <p>Texto</p>
+</body>
+
+</html>
