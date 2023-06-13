@@ -28,7 +28,7 @@ print('Maquina eligió ->',choice_maq)
 #Ganador!
 
 if choice_maq == choice_user:
-    print ("Es empate")
+    print ("Es un empate")
 else:
     if choice_maq == 'Piedra' and choice_user == 'Papel':
         print('Gana Usuario!')
